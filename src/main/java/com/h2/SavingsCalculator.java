@@ -51,10 +51,10 @@ public class SavingsCalculator {
         }
         final float[] debits = new float[debitsAsString.length];
         for (int i = 0; i < debitsAsString.length; i++) {
-            credits[i] = Float.parseFloat(debitsAsString[i]);
+            debits[i] = Float.parseFloat(debitsAsString[i]);
         }
         final SavingsCalculator calculator = new SavingsCalculator(credits, debits);
-        final float netSavings = calculator.calculate();
+        float netSavings = calculator.calculate();
         System.out.println("Net Savings = " + netSavings + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
     }
 }
